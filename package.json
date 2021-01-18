@@ -1,0 +1,53 @@
+{
+  "name": "eslint-config",
+  "version": "1.0.0",
+  "description": "Eslint Config",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "eslint": "eslint . --ext .js",
+    "eslint-fix": "eslint . --ext .js --fix",
+    "eslint-quiet": "npm run eslint -- --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run eslint-quiet"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dcheepurupalli/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "linting",
+    "style",
+    "style",
+    "guide",
+    "policy"
+  ],
+  "author": "1Fleet Team",
+  "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-mocha": "6.3.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-security": "1.4.0"
+  },
+  "peerDependencies": {
+    "eslint": "6.8.0"
+  },
+  "devDependencies": {
+    "commitizen": "4.0.4",
+    "cz-conventional-changelog": "3.1.0",
+    "eslint": "6.8.0",
+    "husky": "4.2.5"
+  }
+}
